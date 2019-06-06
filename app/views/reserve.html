@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="../style/styles.css" />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Reservations</title>
+  </head>
+  <body>
+    <!-- Jumbotron -->
+
+    <div class="container text-center">
+      <div class="jumbotron">
+        <h1 class="display-4">Chez Luc</h1>
+        <p class="lead">
+          The best fine dining experience in San Francisco
+        </p>
+        <hr class="my-4" />
+        <p>
+          Here you can make your reservation
+        </p>
+        <a class="btn btn-danger btn-lg" href="./home.html" role="button"
+          >Home</a
+        >
+        <a class="btn btn-primary btn-lg" href="./tables.html" role="button"
+          ><span class="fa fa-list-alt"> The Tables </span>
+        </a>
+      </div>
+    </div>
+
+    <!--  Form -->
+
+    <div class="container">
+      <form>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputFirstName">First Name</label>
+            <input
+              type="name"
+              class="form-control"
+              id="inputFirstName"
+              placeholder="First Name"
+            />
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputLastName">Last Name</label>
+            <input
+              type="lastname"
+              class="form-control"
+              id="inputLastName"
+              placeholder="Last Name"
+            />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPhoneNumber">Phone Number</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputPhoneNumber"
+            placeholder="Phone number"
+          />
+        </div>
+        <div class="form-group">
+          <label for="inputEMail">E-mail</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputEMail"
+            placeholder="E-mail"
+          />
+        </div>
+        <div class="form-group">
+          <label for="inputAlias">Alias</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputAlias"
+            placeholder="Your mystery name ...."
+          />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Make Reservation</button>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="../style/styles.css" />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Tables</title>
+  </head>
+  <body>
+    <!-- Jumbotron -->
+    <div class="container text-center">
+      <div class="jumbotron">
+        <h1 class="display-4">Chez Luc</h1>
+        <p class="lead">
+          The best fine dining experience in San Francisco
+        </p>
+        <hr class="my-4" />
+        <p>
+          here you can see the current tables and the waiting list
+        </p>
+        <a class="btn btn-danger btn-lg" href="./reserve.html" role="button"
+          >Make A Reservation</a
+        >
+        <a class="btn btn-primary btn-lg" href="./home.html" role="button"
+          ><span class="fa fa-list-alt"> Home </span>
+        </a>
+      </div>
+    </div>
+
+    <div class="container text-center">
+      <!-- Tables -->
+      <div class="card">
+        <div class="card-header">
+          Tables
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Current Tables</h5>
+          <div id="tables"></div>
+        </div>
+      </div>
+
+      <div class="row mt-5"></div>
+      <!-- Waiting List -->
+      <div class="card">
+        <div class="card-header">
+          Waiting List
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Current Guests on the Wait List</h5>
+          <p class="card-text">
+              <div id="waiting-list"></div>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
