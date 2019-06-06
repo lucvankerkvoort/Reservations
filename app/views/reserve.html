@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
+
     <!-- Bootstrap -->
     <link
       rel="stylesheet"
@@ -10,7 +17,7 @@
     />
 
     <!-- Local CSS -->
-    <link rel="stylesheet" href="../style/styles.css" />
+    <!-- <link rel="stylesheet" href="../style/styles.css" /> -->
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -91,8 +98,42 @@
           />
         </div>
 
-        <button type="submit" class="btn btn-primary">Make Reservation</button>
+        <button id="submit" type="submit" class="btn btn-primary">
+          Make Reservation
+        </button>
       </form>
     </div>
+
+    <!-- JavaScript Object -->
+
+    <script type="text/javascript">
+      $("#submit").on("click", function() {
+        event.preventDefault();
+
+        var reservations = {
+          firstName: $("#inputFirstName")
+            .val()
+            .trim(),
+          lastName: $("#inputLastName")
+            .val()
+            .trim(),
+          phoneNumber: $("#inputPhoneNumber")
+            .val()
+            .trim(),
+          eMail: $("#inputEMail")
+            .val()
+            .trim(),
+          Alias: $("#inputAlias")
+            .val()
+            .trim()
+        };
+
+        console.log(reservations);
+
+        $.post("/api/reservations", reservations, function(data) {
+          alert(data, "has been added");
+        });
+      });
+    </script>
   </body>
 </html>

@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+          <!-- jQuery -->
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"
+  ></script>
+  
     <!-- Bootstrap -->
     <link
       rel="stylesheet"
@@ -9,8 +16,6 @@
       crossorigin="anonymous"
     />
 
-    <!-- Local CSS -->
-    <link rel="stylesheet" href="../style/styles.css" />
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -64,5 +69,23 @@
         </div>
       </div>
     </div>
+    <script type="text/javascript">
+    
+    $.get("/api/reservations", function(data){
+        
+        var reservation = $("<ol>");
+        for (let i = 0; i < data.length; i++) {
+        var listItem = $("<li>")
+            listItem.append(data[i].Alias);
+            reservation.append(listItem);
+                
+        }
+        $("#tables").append(reservation)
+
+            console.log(data)
+
+
+    });
+    </script>
   </body>
 </html>
